@@ -17,7 +17,7 @@
         flex-direction: column;
         height: 100vh;
       }
-      textarea {
+      textarea,ul {
         flex: 1;
         border: none;
         padding: .5em;
@@ -26,7 +26,10 @@
         background: #00ffe7
       }
       textarea::placeholder {
-        color: rgba(0,0,0,0.6)
+        color: rgba(0,0,0,0.5)
+      }
+      ul {
+        color: #ff00e7
       }
       button {
         background: #cf0;
@@ -34,7 +37,13 @@
         border-radius: 0;
         font-size: 3em;
         padding: .2em;
-        box-shadow: #00000038 0 0 15px
+        box-shadow: #00000038 0 0 15px;
+        z-index: 1;
+        transition: .2s
+      }
+      button:focus {
+        opacity: 0.75;
+        outline: none;
       }
     </style>
   </head>
@@ -42,7 +51,19 @@
     <textarea name="names" rows="8" cols="80" placeholder="paste
 some
 names
-here"></textarea>
+here">
+paste
+some
+names
+here
+</textarea>
+    <!-- <ul>
+      <li>paste</li>
+      <li>some</li>
+      <li>names</li>
+      <li>here</li>
+    </ul> -->
     <button>Randomaze</button>
+    <script type="module" src="lib/main.js"></script>
   </body>
 </html>
